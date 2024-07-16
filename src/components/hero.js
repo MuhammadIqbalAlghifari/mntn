@@ -31,21 +31,21 @@ export default function HeroParallax() {
                 {
                     y: '-300'
                 }, 
-                0.3
+                0
             );
             tl.to(
                 mountain1.current,
                 {
                     y: '-100'
                 }, 
-                0.2
+                0
             );
             tl.to(
                 sky1.current,
                 {
-                    top: 0
+                    scale: 1.5,
                 }, 
-                0.2
+                0
             );
             tl.to(
                 CTASection.current,

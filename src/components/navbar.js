@@ -1,31 +1,10 @@
 "use client"
 
-import { useEffect, useState } from "react";
-
 export default function NavbarComponent() {
 
-    const [open, setOpen] = useState(false);
-    const [isScrolled, setIsScrolled] = useState(false);
-
-    useEffect(() => {
-        const handleScroll = () => {
-        if (window.scrollY > 4000) {
-            setIsScrolled(true);
-        } else {
-            setIsScrolled(false);
-        }
-        };
-        // Attach the event listener
-        window.addEventListener("scroll", handleScroll);
-        // Remove the event listener on cleanup
-        return () => {
-        window.removeEventListener("scroll", handleScroll);
-        };
-    }, []);
-
     return (
-        <header className="fixed z-50 w-full">
-            <nav className={`flex lg:p-8 md:p-6 p-4 max-w-7xl mx-auto rounded-b-lg justify-between items-center w-full transition-all duration-500 ease-out ${isScrolled ? "bg-[#0B1D26] opacity-100 bg-opacity-50 backdrop-blur-sm text-white" : "bg-transparent opacity-0 backdrop-blur-0 text-white"}`}>
+        <header className="w-full absolute top-0 z-10">
+            <nav className={`flex lg:p-8 md:p-6 p-4 text-white rounded-b-lg justify-between items-center w-full transition-all duration-500 ease-out`}>
                 <h1 className="text-white xl:text-[32px] lg:text-2xl" style={{fontFamily: 'Chronicle Display Bold'}}>MNTN</h1>
                 <ul className="md:flex hidden items-center justify-center gap-x-5">
                     <li className="text-white xl:text-lg lg:text-sm cursor-pointer" style={{fontFamily: "Gilroy Bold"}}>Equipment</li>
