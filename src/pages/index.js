@@ -8,6 +8,7 @@ import HikingSection from "@/components/hiking";
 import NavbarComponent from "@/components/navbar";
 import TimingSection from "@/components/timing";
 import { Inter } from "next/font/google";
+import Lenis from 'lenis'
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,6 +16,14 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    const lenis = new Lenis()
+
+    function raf(time) {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
+
+requestAnimationFrame(raf)
     // Simulate loading for 3 seconds
     const timer = setTimeout(() => {
       setLoading(false);
