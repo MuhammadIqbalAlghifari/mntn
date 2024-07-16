@@ -31,7 +31,7 @@ export default function HeroParallax() {
                 {
                     y: '-300'
                 }, 
-                0.5
+                0.3
             );
             tl.to(
                 mountain1.current,
