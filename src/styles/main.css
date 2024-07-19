@@ -43,5 +43,22 @@
     font-display: swap;
 }
 
-
-
+body {
+    --sb-track-color: #0B1D26;
+    --sb-thumb-color: #1d6826;
+    --sb-size: 11px;
+  }
+  
+  body::-webkit-scrollbar {
+    width: var(--sb-size)
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 0px;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 5px;
+  }
